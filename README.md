@@ -20,12 +20,10 @@ sudo apt install -y dotnet-sdk-8.0
 
 # Optional: Confirm .NET installation
 dotnet --version
-
 ```
-
 ```bash
-
 # Install EF Core & Create DB
+cd InventoryApi
 
 export PATH="$PATH:$HOME/.dotnet/tools"
 
@@ -38,10 +36,7 @@ dotnet tool install --global dotnet-ef
 ```
 
 ### 2. Run Migrations & Start App
-
 ```bash
-cd InventoryApi
-
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 dotnet run
