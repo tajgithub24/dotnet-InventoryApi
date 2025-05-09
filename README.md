@@ -49,6 +49,60 @@ dotnet run
 
 App will be available at: [http://<server-ip>:5000/swagger](http://<server-ip>:5000/swagger)
 
+
+
+## Example API Test with curl
+
+```bash
+
+curl -X POST http://<server-ip>:5000/api/products \
+ -H "Content-Type: application/json" \
+ -d '{"name":"Mouse","quantity":10,"price":25.99}'
+
+```
+## verify the product
+
+# 1. Swagger UI (Interactive Web Interface)
+Open your browser and go to:
+```bash
+http://<your-server-ip>:5000/swagger
+```
+Then:
+
+Expand the GET /api/products section.
+
+Click "Try it out" → "Execute"
+
+You will see a list of all products, including the one you just added.
+
+# ✅ 2. Using curl (CLI-based)
+You can also retrieve products via the command line:
+
+```bash
+curl http://<server-ip>:5000/api/products
+```
+Example response:
+
+```json
+
+[
+  {
+    "id": 1,
+    "name": "Mouse",
+    "quantity": 10,
+    "price": 25.99
+  }
+]
+```
+
+# ✅ 3. Using a REST Client (Optional)
+If you’re on a system with access to tools like Postman, Insomnia, or REST Client (VS Code extension), you can:
+
+Send ``GET http://<server-ip>:5000/api/products``
+
+View the response in a structured format
+
+
 ## 🐳 Docker (optional)
 
 ```dockerfile
