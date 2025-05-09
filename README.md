@@ -26,12 +26,14 @@ dotnet --version
 ```bash
 
 # Install EF Core & Create DB
+
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 
 dotnet restore
 dotnet tool install --global dotnet-ef
-export PATH="$PATH:$HOME/.dotnet/tools"
 
 ```
 
