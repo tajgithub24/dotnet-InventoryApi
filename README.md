@@ -57,7 +57,7 @@ curl -X POST http://<server-ip>:5000/api/products \
 ```
 ### verify the product
 
-#### 1. Swagger UI (Interactive Web Interface)
+#### ✅ 1. Swagger UI (Interactive Web Interface)
 Open your browser and go to:
 ```bash
 http://<your-server-ip>:5000/swagger
@@ -129,6 +129,3 @@ docker run -d -p 5000:5000 inventory-api
 - `PUT /api/products/{id}`
 - `DELETE /api/products/{id}`
 
-### ✅ Ready for: Azure VM, Docker, CI/CD
-
-MIT License
