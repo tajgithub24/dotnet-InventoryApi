@@ -46,7 +46,7 @@ App will be available at: [http://<server-ip>:5000/swagger](http://<server-ip>:5
 
 
 
-## Example API Test with curl
+### Example API Test with curl
 
 ```bash
 
@@ -55,9 +55,9 @@ curl -X POST http://<server-ip>:5000/api/products \
  -d '{"name":"Mouse","quantity":10,"price":25.99}'
 
 ```
-## verify the product
+### verify the product
 
-# 1. Swagger UI (Interactive Web Interface)
+#### 1. Swagger UI (Interactive Web Interface)
 Open your browser and go to:
 ```bash
 http://<your-server-ip>:5000/swagger
@@ -70,7 +70,7 @@ Click "Try it out" → "Execute"
 
 You will see a list of all products, including the one you just added.
 
-# ✅ 2. Using curl (CLI-based)
+#### ✅ 2. Using curl (CLI-based)
 You can also retrieve products via the command line:
 
 ```bash
@@ -90,7 +90,7 @@ Example response:
 ]
 ```
 
-# ✅ 3. Using a REST Client (Optional)
+#### ✅ 3. Using a REST Client (Optional)
 If you’re on a system with access to tools like Postman, Insomnia, or REST Client (VS Code extension), you can:
 
 Send ``GET http://<server-ip>:5000/api/products``
@@ -98,7 +98,7 @@ Send ``GET http://<server-ip>:5000/api/products``
 View the response in a structured format
 
 
-## 🐳 Docker (optional)
+### 🐳 Docker (optional)
 
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
@@ -122,13 +122,13 @@ docker build -t inventory-api .
 docker run -d -p 5000:5000 inventory-api
 ```
 
-## 📦 API Endpoints
+### 📦 API Endpoints
 
 - `GET /api/products`
 - `POST /api/products`
 - `PUT /api/products/{id}`
 - `DELETE /api/products/{id}`
 
-## ✅ Ready for: Azure VM, Docker, CI/CD
+### ✅ Ready for: Azure VM, Docker, CI/CD
 
 MIT License
