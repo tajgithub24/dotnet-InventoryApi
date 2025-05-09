@@ -38,6 +38,8 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 ### 2. Run Migrations & Start App
 
 ```bash
+cd InventoryApi
+
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 dotnet run
