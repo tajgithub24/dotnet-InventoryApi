@@ -22,5 +22,6 @@ app.UseSwagger();
 app.UseSwaggerUI();
 app.UseAuthorization();
 app.MapControllers();
-app.Urls.Add("http://0.0.0.0:5000");
+app.MapGet("/", () => "Inventory API is running.");
+// app.Urls.Add("http://0.0.0.0:5000");
 app.Run();
